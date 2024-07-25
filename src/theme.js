@@ -1,6 +1,5 @@
 import { createContext, useState, useMemo } from 'react';
-import { createTheme } from '@mui/material/StyleSheet';
-import { Battery20Rounded } from '@mui/icons-material';
+import { createTheme } from '@mui/material/styles';
 
 // color design tokens
 export const tokens = (mode) => ({
@@ -208,7 +207,7 @@ export const useMode = () => {
         []
     );
 
-    const theme = useMemo(() => createTheme=(themeSettings(mode)), [mode]);
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
     return [theme, colorMode];
 }
